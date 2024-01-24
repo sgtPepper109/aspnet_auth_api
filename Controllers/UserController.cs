@@ -17,11 +17,11 @@ namespace ASPNETAuthAPI.Controllers
 
         [HttpPost("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] User userObject) {
-            if (userObject == null) return BadRequest();
-            User userReturned = await _applicationDBContext.Users.FirstOrDefaultAsync(x => x.Email == userObject.Email);
-            if (userReturned == null) return NotFound(new {Message = "User Not Found"});
+            if (userObject == null) return BadRequest(new {Message="Bad Request", code="0"});
+            User? userReturned = await _applicationDBContext.Users.FirstOrDefaultAsync(x => x.Email == userObject.Email);
+            if (userReturned == null) return NotFound(new {Message="User Not Found", code="2"});
             if (userReturned.Password != userObject.Password) return BadRequest(new {Message = "Password Mismatch"});
-            return Ok(new {Message = "User Found"});
+            return Ok(new {Message="User Found", code="1"});
         }
 
         [HttpPost("register")]
@@ -29,7 +29,7 @@ namespace ASPNETAuthAPI.Controllers
             if (userObject == null) return BadRequest();
             await _applicationDBContext.Users.AddAsync(userObject);
             await _applicationDBContext.SaveChangesAsync();
-            return Ok (new {Message = "User Registered"});
+            return Ok(new {Message="User Registered", code="11"});
         }
     }
 }
