@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jq5yJL1T/61vCWnH+qxw3r6pWjPYarzK0dEBEaQrXqk=",
+  "Source": "ASPNETAuthAPI",
+  "BasePath": "_content/ASPNETAuthAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
