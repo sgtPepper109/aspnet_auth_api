@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "jq5yJL1T/61vCWnH+qxw3r6pWjPYarzK0dEBEaQrXqk=",
+  "Hash": "vr5kYNMZCpFg7PgPZ1JG6cfiFzm+7z/20t4Q7rI9gtM=",
   "Source": "ASPNETAuthAPI",
   "BasePath": "_content/ASPNETAuthAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPNETAuthAPI\\wwwroot",
+      "Source": "ASPNETAuthAPI",
+      "ContentRoot": "C:\\Users\\Acer\\Misc\\Demo_Angular_ASP_NET\\ASPNETAuthAPI\\wwwroot\\",
+      "BasePath": "_content/ASPNETAuthAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Acer\\Misc\\Demo_Angular_ASP_NET\\ASPNETAuthAPI\\wwwroot\\swagger-ui\\SwaggerDark.css",
+      "SourceId": "ASPNETAuthAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\Misc\\Demo_Angular_ASP_NET\\ASPNETAuthAPI\\wwwroot\\",
+      "BasePath": "_content/ASPNETAuthAPI",
+      "RelativePath": "swagger-ui/SwaggerDark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\swagger-ui\\SwaggerDark.css"
+    }
+  ]
 }

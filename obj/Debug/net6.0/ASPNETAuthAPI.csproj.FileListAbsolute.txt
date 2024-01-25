@@ -60,3 +60,4 @@ C:\Users\Acer\Misc\Demo_Angular_ASP_NET\ASPNETAuthAPI\obj\Debug\net6.0\refint\AS
 C:\Users\Acer\Misc\Demo_Angular_ASP_NET\ASPNETAuthAPI\obj\Debug\net6.0\ASPNETAuthAPI.pdb
 C:\Users\Acer\Misc\Demo_Angular_ASP_NET\ASPNETAuthAPI\obj\Debug\net6.0\ASPNETAuthAPI.genruntimeconfig.cache
 C:\Users\Acer\Misc\Demo_Angular_ASP_NET\ASPNETAuthAPI\obj\Debug\net6.0\ref\ASPNETAuthAPI.dll
+C:\Users\Acer\Misc\Demo_Angular_ASP_NET\ASPNETAuthAPI\bin\Debug\net6.0\ASPNETAuthAPI.staticwebassets.runtime.json
