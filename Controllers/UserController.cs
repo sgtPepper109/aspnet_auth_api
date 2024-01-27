@@ -1,5 +1,6 @@
 ﻿using ASPNETAuthAPI.Context;
 using ASPNETAuthAPI.Models;
+using ASPNETAuthAPI.Services.Configuration;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -20,13 +21,15 @@ namespace ASPNETAuthAPI.Controllers
             if (userObject == null) return BadRequest(new {Message="Bad Request", code="0"});
             User userReturned = await _applicationDBContext.Users.FirstOrDefaultAsync(x => x.Email == userObject.Email);
             if (userReturned == null) return NotFound(new {Message="User Not Found", code="2"});
-            if (userReturned.Password != userObject.Password) return BadRequest(new {Message="Password Mismatch", code="22"});
+            if (!Encrypt.VerifyEncryption(userObject.Password, userReturned.Password))
+                return BadRequest(new {Message="Password Mismatch", code="22"});
             return Ok(new {Message="Authentication Success", code="1"});
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] User userObject) {
             if (userObject == null) return BadRequest();
+            userObject.Password = Encrypt.Hash(userObject.Password);
             User userReturned = await _applicationDBContext.Users.FirstOrDefaultAsync(x => x.Email == userObject.Email);
             if (userReturned == null) {
                 await _applicationDBContext.Users.AddAsync(userObject);
